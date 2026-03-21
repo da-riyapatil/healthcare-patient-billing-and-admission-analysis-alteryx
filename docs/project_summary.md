@@ -1,14 +1,15 @@
 # Project Summary
 
 ## Overview
-This project analyzes healthcare patient admission and billing data using **Alteryx**. The main goal was to clean the dataset, prepare it for analysis, and generate simple workflow-based insights from patient records.
+This project analyzes healthcare patient data using **Alteryx**. The main goal was to clean the dataset, prepare it for analysis, and generate simple workflow-based outputs related to admissions, billing quality checks, and patient test result distribution.
 
 ## Objective
-The project was created to study:
-- patient distribution by admission type
-- billing amount by medical condition
-- patient segmentation by test results
-- overall category-level patient patterns
+The project was created to:
+- clean and standardize healthcare data
+- validate billing-related records
+- review column-level data quality
+- summarize patient records for simple analysis
+- generate basic visual outputs from the workflow
 
 ## Dataset Summary
 The dataset contains healthcare-related patient records with fields such as:
@@ -30,22 +31,24 @@ The dataset contains healthcare-related patient records with fields such as:
 
 ## Work Performed in Alteryx
 The workflow includes:
-- importing healthcare data from CSV
-- cleaning text fields
-- correcting data types
-- validating billing values
+- importing healthcare data from a CSV file
+- correcting column data types
+- filtering records with negative billing amount
+- rounding billing amount values for readability
 - removing duplicate records
-- summarizing patient counts and billing values
-- generating chart-ready outputs
+- reviewing columns through summary outputs
+- preparing summarized data for visualization
+- generating chart and table outputs
 
 ## Project Outcome
-Using Alteryx, the dataset was transformed into a cleaner and more analysis-ready format. The workflow helped produce simple visual summaries that highlight billing patterns, admission distribution, and patient segmentation across test result categories.
+Using Alteryx, the raw dataset was converted into a cleaner and more analysis-ready format. The workflow produced outputs that help review patient distribution across admission types and test result categories, while also improving billing data quality for further analysis.
 
 ## Skills Demonstrated
 - Alteryx workflow building
 - data cleaning
 - data type correction
+- billing value validation
 - duplicate removal
+- column profiling
 - summarization
 - basic healthcare data analysis
-- chart-based insight generation

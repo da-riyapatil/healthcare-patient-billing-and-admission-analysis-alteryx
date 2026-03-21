@@ -1,48 +1,54 @@
 # Architecture Flow
 
 ## Workflow Overview
-This project follows a simple Alteryx-based analysis flow for healthcare patient billing and admission data.
+This project follows a simple Alteryx-based workflow for cleaning, checking, and summarizing healthcare patient data.
 
 ## Flow
 Healthcare CSV Dataset  
 → Input Data in Alteryx  
-→ Data Cleaning and Standardization  
 → Data Type Correction  
-→ Billing Value Validation  
+→ Branch 1: Column Summary for Data Review  
+→ Branch 2: Negative Billing Filter  
+→ Billing Amount Rounding  
 → Duplicate Removal  
-→ Summarization and Aggregation  
-→ Chart Outputs and Visual Summaries
+→ Summarization for Visualization  
+→ Pie Chart, Bar Chart, and Basic Table Outputs
 
 ## Step-by-Step Flow Description
 
 ### 1. Input Data
 The workflow starts by loading the healthcare dataset from a CSV file into Alteryx.
 
-### 2. Data Cleaning
-Basic cleaning steps are applied to improve data quality, such as trimming text fields and preparing columns for analysis.
+### 2. Data Type Correction
+Important fields are converted into proper formats so the data can be used correctly in the workflow.
 
-### 3. Data Type Correction
-Important fields are converted into proper formats, such as:
+Examples include:
 - Age to integer
 - Date of Admission to date
 - Discharge Date to date
 - Billing Amount to numeric
 - Room Number to integer
 
-### 4. Billing Validation
-Records are checked to ensure billing values are valid, and negative billing amounts are filtered out.
+### 3. Column Summary for Data Review
+A separate branch is used to review column-level information and inspect the data for possible irregularities or outliers.
 
-### 5. Duplicate Removal
-Duplicate patient records are removed using key dataset fields to make the analysis more reliable.
+### 4. Negative Billing Filter
+Records with negative billing amount values are removed so that only valid billing entries continue in the workflow.
 
-### 6. Summarization
-The cleaned data is grouped and summarized to analyze:
-- billing amount by medical condition
-- patients by admission type
-- patients by test results
+### 5. Billing Amount Rounding
+Billing values are rounded to improve readability and consistency in later outputs.
 
-### 7. Output Generation
-The final workflow produces summarized outputs and basic charts for visual analysis.
+### 6. Duplicate Removal
+Duplicate records are removed from the dataset to improve data reliability.
+
+### 7. Summarization
+The cleaned data is grouped and prepared for reporting and visualization.
+
+### 8. Output Generation
+The workflow produces:
+- a pie chart for admission type distribution
+- a bar chart for patient test result insights
+- a basic table for summarized patient information
 
 ## Final Output
-The workflow helps convert raw healthcare records into clean and summarized outputs that can be used to understand patient admission patterns, billing distribution, and test result categories.
+The final workflow converts raw healthcare records into cleaner and summarized outputs that support simple admission and patient-category analysis in Alteryx.
