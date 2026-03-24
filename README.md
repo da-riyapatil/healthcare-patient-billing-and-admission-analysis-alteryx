@@ -29,10 +29,17 @@ Healthcare CSV data
 → Pie chart, bar chart, and basic table outputs
 
 ## Key Insights
-- Admission types are distributed quite evenly across the dataset
-- Test result categories are also fairly balanced
-- The workflow improves data quality by filtering invalid billing values and removing duplicates
-- The project mainly demonstrates workflow-based data preparation and descriptive analysis in Alteryx
+- Admission types were almost evenly distributed: Elective 33.6%, Urgent 33.4%, and Emergency 33.1%
+- Test result categories (Normal, Abnormal, Inconclusive) were broadly balanced across the dataset
+- Billing amounts were spread across major medical conditions, with no single condition dominating overall costs
+- The project was most useful for workflow-based data preparation, summarization, and chart generation vs deep healthcare business modeling
+
+## Business Recommendations
+- Use the workflow as a base for preparing clean healthcare data before reporting
+- Extend analysis with time-based trends to improve decision-making
+- Expand billing analysis across hospital, doctor, and insurance dimensions
+- Build deeper segmentation views such as age group and condition-level analysis
+- Use workflow outputs as input for dashboards or advanced analytics
 
 ## Repository Structure
 ```text
